@@ -139,3 +139,9 @@ Rails/WhereExists: # new in 2.7
   Enabled: true
 Rails/WhereNot: # new in 2.8
   Enabled: true
+Style/ClassAndModuleChildren:
+  SafeAutoCorrect: true
+Style/FrozenStringLiteralComment:
+  SafeAutoCorrect: true
+Style/GlobalStdStream:
+  SafeAutoCorrect: true
