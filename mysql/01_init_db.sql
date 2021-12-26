@@ -1,0 +1,3 @@
+GRANT ALL ON r01.* TO 'rails_app'@'%' IDENTIFIED BY 'password';
+
+CREATE DATABASE IF NOT EXISTS r01;

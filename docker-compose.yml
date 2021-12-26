@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  mysql_dev:
+    build:
+      context: mysql
+      dockerfile: Dockerfile
+    ports:
+      - '3306:3306'
+  mysql_test:
+    build:
+      context: mysql
+      dockerfile: Dockerfile
+    ports:
+      - '13306:3306'
   backend:
     build:
       context: rails
@@ -12,5 +24,8 @@ services:
     environment:
       TZ: Asia/Tokyo
       LANG: C.UTF-8
+    depends_on:
+      - mysql_dev
+      - mysql_test
     volumes:
       - ./rails:/rails
