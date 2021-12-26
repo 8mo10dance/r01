@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: rails
+      dockerfile: Dockerfile
+    working_dir: /rails
+    ports:
+      - '3000:3000'
+    command: bundle exec rails server -b 0.0.0.0
+    environment:
+      TZ: Asia/Tokyo
+      LANG: C.UTF-8
+    volumes:
+      - ./rails:/rails
