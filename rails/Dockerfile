@@ -1,4 +1,4 @@
-FROM ruby:2.7.4 AS backend
+FROM ruby:2.7.2 AS backend
 
 ENV TZ Asia/Tokyo
 
