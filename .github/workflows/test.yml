@@ -12,6 +12,7 @@ jobs:
         working-directory: rails
 
     env:
+      BUNDLER_VERSION: 2.2.29
       RAILS_ENV: test
       RAILS_TEST_DATABASE_HOST: 0.0.0.0
 
